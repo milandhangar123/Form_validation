@@ -50,20 +50,21 @@ submitButton.addEventListener("click", (e) => {
   e.preventDefault();
   console.log(fnTarget, lnTarget, eTarget, pTarget);
   if (firstname) {
-    emptyFieldMessage[0].classList.add("d-none");
+    emptyFieldMessage[0].classList.add("d-none"); // hide element
     if (!nameRegex.test(firstname)) {
-      fnTarget.classList.add("error");
-      errorMessages[0].classList.remove("d-none");
-      fnFlag = false;
+      fnTarget.classList.add("error"); // add error class like border or visuals
+      errorMessages[0].classList.remove("d-none"); // show error message
+      fnFlag = false;  //validation fail 
     } else {
       errorMessages[0].classList.add("d-none");
       fnTarget.classList.remove("error");
-      fnFlag = true;
+      fnFlag = true; //validation true
     }
   } else {
     //Show empty field message
-    emptyFieldMessage[0].classList.remove("d-none");
+    emptyFieldMessage[0].classList.remove("d-none"); // show  element
   }
+
   if (lastname) {
     emptyFieldMessage[1].classList.add("d-none");
     if (!nameRegex.test(lastname)) {
@@ -78,6 +79,7 @@ submitButton.addEventListener("click", (e) => {
   } else {
     emptyFieldMessage[1].classList.remove("d-none");
   }
+
   if (email) {
     emptyFieldMessage[2].classList.add("d-none");
     if (!emailRegex.test(email)) {
@@ -92,6 +94,7 @@ submitButton.addEventListener("click", (e) => {
   } else {
     emptyFieldMessage[2].classList.remove("d-none");
   }
+
   if (password) {
     emptyFieldMessage[3].classList.add("d-none");
     if (!pwdRegex.test(password)) {
@@ -106,6 +109,7 @@ submitButton.addEventListener("click", (e) => {
   } else {
     emptyFieldMessage[3].classList.remove("d-none");
   }
+
   if (fnFlag && lnFlag && eFlag && pFlag) {
     fnTarget.value = lnTarget.value = eTarget.value = pTarget.value = "";
     window.location.href = "success.html";

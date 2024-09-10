@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>     
 <body>
-    <h1 class="heading-1">Registration Form</h1>
+    <h1 class="heding-1">Registration Form</h1>
     <form class="form">
       <div class="fn-container gutter-small">
-        <label class="d-flex direction-column gap"
-          >First Name
-          <input data-key="firstName" class="input" placeholder="firstName" />
-        </label>
-        <span data-error="fn-err" class="error-message"
-          >Name must only contain alphabets</span
-        >
-        <span class="empty-field">*Please fill this field</span>
+        <label class="d-flex direction-column gap">
+          First Name
+        <input data-key="firstName" class="input" placeholder="FirstName"/>
+      </label>
+      <span data-error="fn-error" class="error-message"
+      >Name must only contain alphabets</span>
+      <span class="empty-field">*Please fill this field</span>
       </div>
 
       <div class="ln-container gutter-small">
@@ -33,17 +32,16 @@
       </div>
 
       <div class="email-container gutter-small">
-        <label class="d-flex direction-column gap"
-          >Email Id
+        <label class="d-flex direction-column gap">Email Id
           <input
-            data-key="email"
-            type="email"
-            class="input"
-            placeholder="name@example.com"
+           data-key="email"
+           type="email"
+           class="input"
+           placeholder="name@example.com"
           />
+          <span data-error="email-err" class="error-message">Invalid Email</span>
+          <span class="empty-field">*Please this field</span>
         </label>
-        <span data-error="email-err" class="error-message">Invalid Email</span>
-        <span class="empty-field">*Please fill this field</span>
       </div>
 
       <div class="pwd-container gutter-small relative">
@@ -71,7 +69,8 @@
           <li class="list">
             Password must contain atleast one upper case letter
           </li>
-          <li class="list">Password must contain atleast one digit</li>
+          <li class="list">
+            Password must contain atleast one digit</li>
           <li class="list">
             Password must contain atleast one special character (!@#$%^&*)
           </li>
